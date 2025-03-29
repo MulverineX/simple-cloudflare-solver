@@ -1,4 +1,5 @@
 import re
+import os
 from urllib.parse import urlparse
 
 from CloudflareBypasser import CloudflareBypasser
@@ -120,7 +121,6 @@ async def get_solverr(request: ClientRequest):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Cloudflare bypass api")
     parser.add_argument("--debug", action="store_true", help="Disable logging")
-    parser.add_argument("--port", help="Port to bind service", default=8000)
 
     args = parser.parse_args()
     if args.debug:
@@ -140,4 +140,4 @@ if __name__ == "__main__":
 
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=args.port, log_config=None)
+    uvicorn.run(app, host="0.0.0.0", port=os.environ["PORT"], log_config=None)
