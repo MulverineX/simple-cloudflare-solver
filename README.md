@@ -1,5 +1,8 @@
 # simple-cloudflare-solver
 
+## This fork
+`PORT` environment variable is required for the container, allows you to use it with Dockge
+
 **simple-cloudflare-solver** est une API permettant de contourner le système de protection de Cloudflare. Elle peut être utilisée comme une passerelle par des applications comme Jackett et Prowlarr pour accéder aux ressources protégées.
 
 ## Fonctionnalités
