@@ -140,4 +140,5 @@ if __name__ == "__main__":
 
     import uvicorn
 
+    # Removed port argument because you can't pass arguments in compose stacks
     uvicorn.run(app, host="0.0.0.0", port=os.environ["PORT"], log_config=None)
